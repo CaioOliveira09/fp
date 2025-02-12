@@ -122,15 +122,21 @@ section {
        
 
          & button{
+            top: 60%;
+            width: 50%;
+            height: 50%;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            
 
         & img {
-            width: 100px;
-            font-size: 12px;
-            text-align: right;
+
+            width: 30px;
             
         }
     }
-    }  
+}  
 
 
   .indicators{

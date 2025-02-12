@@ -69,10 +69,9 @@ section {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: end;
+                justify-content: center;
                 align-items: end;
                 gap: 20px;
-
 
                 & .car-information{
                     font-weight: bold;
@@ -84,7 +83,7 @@ section {
                 }
 
                 & .description {
-                
+                    
                     color: #d9d9d9;
                 }
 
@@ -101,45 +100,52 @@ section {
                 }
             }
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 100%;
+            top: 50%;
+            background-color: white;
+        }
     }
 }
-    .arrows {
 
-      width: 70vw;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -25px);
-      display: flex;
-      justify-content: space-between;
+.arrows {
+    width: 100vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
 
-        & button:nth-child(1) {
-          & img{
-            transform: scale(-1);
-          }
-        }
+.arrows button {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+}
 
-       
+.arrows button img {
+    width: 30px;
+    transition: transform 0.3s;
+    margin-top: 4px;
+}
 
-         & button{
-            top: 60%;
-            width: 50%;
-            height: 50%;
-            border-radius: 50%;
-            border: none;
-            cursor: pointer;
-            
+.arrows button:nth-child(1) img {
+    transform: rotate(180deg); /* Corrigido para inverter a seta esquerda */
+}
 
-        & img {
+.arrows button:hover img {
+    transform: scale(1.2);
+}
 
-            width: 30px;
-            
-        }
-    }
-}  
-
-
-  .indicators{
+.indicators{
     position: absolute;
     top: 50%;
     transform: translateX(-50%);
@@ -172,9 +178,4 @@ section {
             background-color: white;
         }
     }
-
-  }
 }
-
-
-
